@@ -13,7 +13,7 @@ let     val = document.getElementById('squareSide'),
         val.addEventListener('keydown', trigger);
         count.addEventListener('click', empty);
         
-        countArea();
+        countArea()
         
         function trigger(event) {
 
@@ -31,45 +31,33 @@ let     val = document.getElementById('squareSide'),
         }
         
         function countArea() {
-            if (active = true) {
-                            
-                count.addEventListener('click', function() {
-                result.value = val.value ** 2 + '' + 'cm'});
 
-                result.value = '';
-                resultText = 'Luas Persegi:';
-                equationText = 'L = S x S';
-                symbolLetter = 'L = Luas Persegi';
-                area.style.backgroundColor = '#43766C';
-                perimeter.style.backgroundColor = '';
-            }
-
-            document.getElementById('resultName').innerText = resultText;
-            document.getElementById('equation').innerHTML = equationText;
-            document.getElementById('symbol').innerHTML = symbolLetter;
+            count.addEventListener('click', function() {
+            result.value = val.value ** 2 + '' + 'cm'});
+            result.value = '';
+            area.style.backgroundColor = '#43766C';
+            perimeter.style.backgroundColor = '';
+            document.getElementById('resultName').innerText = 'Luas Persegi:';
+            document.getElementById('equation').innerHTML = 'L = S x S';
+            document.getElementById('symbol').innerHTML = 'L = Luas Persegi';
         }
 
         function countPerimeter() {
-            if (active = true) {
-                
-                count.addEventListener('click', function() {
-                result.value = 4 * val.value + '' + 'cm'});
-
-                result.value = '';
-                resultText = 'Keliling Persegi:';
-                equationText = 'P = 4 x S';
-                symbolLetter = 'P = Keliling Persegi';
-                perimeter.style.backgroundColor = '#43766C';
-                area.style.backgroundColor = '';
-            }
-
-            document.getElementById('resultName').innerText = resultText;
-            document.getElementById('equation').innerHTML = equationText;
-            document.getElementById('symbol').innerHTML = symbolLetter;
+            
+            count.addEventListener('click', function() {
+            result.value = 4 * val.value + '' + 'cm'});
+            result.value = '';
+            perimeter.style.backgroundColor = '#43766C';
+            area.style.backgroundColor = '';
+            document.getElementById('resultName').innerText = 'Keliling Persegi:';
+            document.getElementById('equation').innerHTML = 'P = 4 x S';
+            document.getElementById('symbol').innerHTML = 'P = Keliling Persegi';
         }
 
         function empty() {
-            if (val.value == '') {
+            
+            if (!val.value) {
+                rst = '';
                 document.getElementById('inputAlert').innerHTML = 'Masukan angka terlebih dahulu.';
             } else {
                 document.getElementById('inputAlert').innerHTML = '';

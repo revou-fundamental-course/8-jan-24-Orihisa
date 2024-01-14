@@ -74,7 +74,7 @@ hr {
     border-radius: 0 8px 8px 0;
 }
 
-#countArea, #countPerimeter {
+#modeSection button {
     width: 100%;
 }
 
@@ -116,16 +116,17 @@ img {
 label {
     text-align: left;
     width: fit-content;
-    color: #F8FAE5;
-    background-color: #B19470;
+    color: #76453B;
+    /* background-color: #B19470; */
     padding: 4px;
     margin-top: 2px;
     margin-bottom: 4px;
     border-radius: 4px;
 }
 
-#count, #result {
+#inputSection div {
     display: flex;
+    margin-bottom: 2px;
 }
 
 .textBox {
@@ -137,11 +138,7 @@ label {
     width: 100%;
 }
 
-.textBox, #countButton, #resetButton {
-    margin-bottom: 2px;
-}
-
-#countButton, #resetButton {
+#inputSection div button {
     width: 128px;
     border-radius: 0 8px 8px 0;
     margin-right: 0;
@@ -158,6 +155,10 @@ label {
     text-align: center;
     color: #76453B;
     margin-top: 32px;
+}
+
+#hint span {
+    font-weight: lighter;
 }
 
 #infoSection {
