@@ -1,0 +1,196 @@
+body {
+    /* font-family: Arial, Helvetica, sans-serif; */
+    background-color: #F8FAE5;
+    background-image: url(../assets/cubes.png);
+    margin: 0;
+}
+
+body, button, input {
+    font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
+}
+
+#header {
+    font-size: 48px;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+footer h4 {
+    font-size: small;
+    margin-top: 16px;
+    margin-bottom: 0;
+}
+
+#header, footer h4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    width: 100%;
+    color: #F8FAE5;
+    text-align: center;
+    background-color: #43766C;
+}
+
+#longName {
+    font-size: x-large;
+    color: #B19470;
+    margin-left: 8px;
+}
+
+#intro h4, #intro p {
+    font-size: large;
+    text-align: center;
+    color: #76453B;
+}
+
+#intro p {
+    margin: 0;
+}
+
+main {
+    width: fit-content;
+    margin: auto;
+    padding: 32px;
+    /* background-image: linear-gradient(to bottom, white, #B19470); */
+    background-image: url(../assets/ep_natural.png);
+    box-shadow: 2px 2px 4px;
+}
+
+hr {
+    margin-block: 30px;
+}
+
+#modeSection {
+    display: flex;
+    margin-bottom: 32px;
+}
+
+#countArea {
+    border-radius: 8px 0 0 8px;
+}
+
+#countPerimeter {
+    border-radius: 0 8px 8px 0;
+}
+
+#countArea, #countPerimeter {
+    width: 100%;
+}
+
+#calculatorSection {
+    height: 320px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#imageSection {
+    border: 2px solid #76453B;
+    border-radius: 8px;
+    background-color: white;
+    text-align: center;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    max-width: 300px;
+    max-height: 300px;
+}
+
+#inputSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    margin-left: 32px;
+}
+
+#inputSection, #imageSection {
+    max-width: 320px;
+    min-width: 320px;
+}
+
+label {
+    text-align: left;
+    width: fit-content;
+    color: #F8FAE5;
+    background-color: #B19470;
+    padding: 4px;
+    margin-top: 2px;
+    margin-bottom: 4px;
+    border-radius: 4px;
+}
+
+#count, #result {
+    display: flex;
+}
+
+.textBox {
+    font-size: x-large;
+    text-align: center;
+    outline: none;
+    border: none;
+    border-radius: 8px 0 0 8px;
+    width: 100%;
+}
+
+.textBox, #countButton, #resetButton {
+    margin-bottom: 2px;
+}
+
+#countButton, #resetButton {
+    width: 128px;
+    border-radius: 0 8px 8px 0;
+    margin-right: 0;
+}
+
+#inputAlert {
+    font-size: small;
+    text-align: center;
+    color: red;
+}
+
+#hint {
+    font-size: small;
+    text-align: center;
+    color: #76453B;
+    margin-top: 32px;
+}
+
+#infoSection {
+    border-radius: 8px;
+    color: #76453B;
+    background-color: white;
+    
+}
+
+#infoSection #info {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#info .fontWeight {
+    font-weight: bold;
+}
+
+button {
+    background-color: #76453B;
+    color: #F8FAE5;
+    border: none;
+    border-radius: 8px;
+    height: 47px;
+    cursor: pointer;
+}
+
+.buttons:hover {
+    background-color: #a56153;
+}
+
+.buttons:active {
+    background-color: #4b2c26;
+}
