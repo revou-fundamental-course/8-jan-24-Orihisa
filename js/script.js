@@ -17,7 +17,7 @@ areaFunc();
 
 function validateInput() {
 
-    let numeric = /^-?\d*[.[?=\d]]*\d*$/;
+    let numeric = /^\d*\.?\d*$/;
     if (!val.value.match(numeric)) {
         alert.innerHTML = 'Isi dengan angka yang benar.';
     } else {
