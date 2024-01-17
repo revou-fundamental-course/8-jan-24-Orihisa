@@ -16,23 +16,15 @@ count.addEventListener('click', empty);
 areaFunc();
 
 function validateInput() {
-
-    let numeric = /^\d*\.?\d*$/;
-    if (!val.value.match(numeric)) {
-        alert.innerHTML = 'Isi dengan angka yang benar.';
-    } else {
-        alert.innerHTML = null;
-    }
-}
-
-function empty() {
     
-    if (!val.value) {
-        result.value = nan;
+    let numeric = /^\d*(\.?\d*)?$/;
+    if (!val.value.match(numeric)) {
+        val.value = parseFloat(val.value);
+        alert.innerHTML = 'Isi dengan angka positif.';
         val.style.border = '2px solid red';
-        alert.innerHTML = 'Masukan angka terlebih dahulu.';
     } else {
-        alert.innerHTML = null;
+        alert.innerHTML = '';
+        val.style.border = 'none';
     }
 }
 
@@ -45,10 +37,21 @@ function trigger(event) {
     }
 }
 
+function empty() {
+    
+    if (!val.value) {
+        val.style.border = '2px solid red';
+        alert.innerHTML = 'Masukan angka positif terlebih dahulu.';
+    } else {
+        alert.innerHTML = '';
+        val.style.border = 'none';
+    }
+}
+
 function clear() {
     val.style.border = 'none';
     val.value = '';
-    result.value = null;
+    result.value = '';
     document.getElementById('inputAlert').innerHTML = '';
 }
 
@@ -63,18 +66,30 @@ function areaFunc() {
     document.getElementById('symbol').innerHTML = 'L = Luas Persegi';
     
     count.addEventListener('click', function() {
-        result.value = parseFloat(val.value ** 2)
-        if (val.value !== '') {
+        
+        if (val.value != '') {
             val.style.border = 'none';
         }
-    });                
-    
+        result.value = parseFloat(val.value ** 2).toFixed(3);
+        if (result.value != parseFloat(result.value)) {
+            return parseInt(result.value);
+        } else if (result.value = parseFloat(result.value)) {
+            return parseFloat(result.value);
+        }
+    });
+
     if (result.value !== '') {
-        result.value = parseFloat(val.value ** 2);
+        result.value = parseFloat(val.value ** 2).toFixed(3);
     }
+    if (result.value != parseFloat(result.value)) {
+        return parseInt(result.value);
+    } else if (result.value = parseFloat(result.value)) {
+        return parseFloat(result.value);
+    }         
 }
         
 function perimeterFunc() {
+
     perimeter.disabled = true;
     area.disabled = false;
     perimeter.style.backgroundColor = '#B19470';
@@ -84,13 +99,23 @@ function perimeterFunc() {
     document.getElementById('symbol').innerHTML = 'P = Keliling Persegi';
 
     count.addEventListener('click', function() {
-        result.value = parseFloat(4 * val.value);
         if (val.value !== '') {
             val.style.border = 'none';
         }
+        result.value = parseFloat(4 * val.value).toFixed(3);
+        if (result.value != parseFloat(result.value)) {
+            return parseInt(result.value);
+        } else if (result.value = parseFloat(result.value)) {
+            return parseFloat(result.value);
+        }
     });
-        
+    
     if (result.value !== '') {
-        result.value = parseFloat(4 * val.value);
+        result.value = parseFloat(4 * val.value).toFixed(3);
+    }
+    if (result.value != parseFloat(result.value)) {
+        return parseInt(result.value);
+    } else if (result.value = parseFloat(result.value)) {
+        return parseFloat(result.value);
     }
 }
