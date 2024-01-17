@@ -161,7 +161,7 @@ label {
 #inputAlert {
     font-size: small;
     color: red;
-    margin-bottom: 8px;
+    margin-block: 4px;
 }
 
 #hint{
@@ -220,7 +220,7 @@ label {
     }
 }
 
-@media only screen and (max-width: 740px) {
+@media only screen and (max-width: 720px) {
     
     main {
         margin-inline: 16px;
@@ -240,12 +240,9 @@ label {
     }   
 }
 
-@media only screen and (max-width: 360px) and (max-height: 640px) {
+@media only screen and (max-width: 375px) and (max-height:740px) {
 
-    main {
-        margin-inline: 16px;
-    }
-    #imageBox {
+    #hint {
         display: none;
     }
 }
