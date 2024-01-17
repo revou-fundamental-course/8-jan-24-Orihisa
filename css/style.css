@@ -56,9 +56,7 @@ footer h4 {
 }
 
 main {
-    width: 768px;
     background-image: url(../assets/ep_natural.png);
-    height: 1366px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -103,7 +101,6 @@ hr {
 }
 
 #calcSection {
-    max-width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -111,8 +108,8 @@ hr {
 }
 
 #imageBox {
-    width: 100%;
-    margin-inline: 32px;
+    width: 300px;
+    height: 300px;
     text-align: center;
     margin: 0;
     box-sizing: border-box;
@@ -124,8 +121,7 @@ img {
 }
 
 #calculator {
-    width: 100%;
-    margin-inline: 32px;
+    width: 300px;
     height: fit-content;
     display: flex;
     flex-direction: column;
@@ -208,46 +204,48 @@ label {
     background-color: #603830;
 }
 
-@media only screen and (max-width: 1280px) and (max-height: 1366px) {
-        
+
+
+@media only screen and (min-width: 864px) {
+
     main {
-        width: auto;
-        height: 1280px;
+        width: 768px;
+    }
+}
+
+@media only screen and (max-width: 864px) {
+
+    main {
         margin-inline: 16px;
     }
 }
 
-@media only screen and (max-width: 840px) and (max-height: 1024px) {
-
+@media only screen and (max-width: 740px) {
+    
     main {
-        height: 1024px;
+        margin-inline: 16px;
     }
-
     #calcSection {
         flex-direction: column;
     }
-
     #calcMode {
         width: auto;
     }
-
     #calculator {
         width: fit-content;
-        
     }
     .textBox {
         flex-direction: row;
         width: 300px;
-    }
-    
+    }   
 }
 
 @media only screen and (max-width: 360px) and (max-height: 640px) {
 
     main {
-        height: 860px;
+        margin-inline: 16px;
     }
-    img {
+    #imageBox {
         display: none;
     }
 }
