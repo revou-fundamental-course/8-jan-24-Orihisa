@@ -2,79 +2,83 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>Kalkulator Matematik Persegi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KATIK</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-    <header>
-        <h1 id="header">
-            KATIK <span id="longName">Kalkulator Matematik</span>
-        </h1>
+    
+    <header id="header">
+        <div>
+            <h1>KATIK </h1><span>Kalkulator Matematik</span>
+        </div>
     </header>
-
+    
     <main>
         <header id="intro">
-            <h4>WELCOME TO KATIK</h4>
+
+            <h3>WELCOME TO KATIK</h3>
             <p>
-                Hai, Sobat! Selamat datang di KATIK! <br>
-                Sebuah <i>web apps</i> sederhana yang berfungsi untuk menghitung luas dan keliling dari persegi.
+                Hai, Sobat! Selamat datang di KATIK. <br>
+                <span>Sebuah <i>web apps</i> sederhana yang berfungsi untuk menghitung luas dan keliling dari persegi.</span>
             </p>
         </header>
+        <div>
+            <hr>
+        </div>
+        <section id="middleSection">
 
-        <hr>
-        <section>
-
-            <div id="modeSection">
-                <button id="countArea" class="buttons" name="squareArea">LUAS PERSEGI</button>
-                <button id="countPerimeter" class="buttons" name="squarePerimeter">KELILING PERSEGI</button>
+            <div id="calcMode">
+                <button id="calcArea" class="buttons" name="calcArea">Luas Persegi</button>
+                <button id="calcPerimeter" class="buttons" name="calcPerimeter">Keliling Persegi</button>
             </div>
             
-            <div id="calculatorSection">
+            <div id="calcSection">
 
-                <figure id="imageSection">
-                    <img src="assets/square.png" alt="square">
+                <figure id="imageBox">
+                        <img src="assets/square.png" alt="square">
                 </figure>
     
-                <div id="inputSection">
+                <div id="calculator">
                     
-                    <label for="squareSide">Sisi (<span id="measurmentUnit">cm</span>):</label>
+                    <label for="squareSide">Sisi:</label>
         
-                    <div id="count">
-                        <input type="number" id="squareSide" class="textBox" name="squareSide" autofocus>
-                        <button id="countButton" class="buttons">Hitung</button>
+                    <div id="calcInput">
+                        <input type="text" id="squareSide" class="textBox" name="squareSide" autofocus>
+                        <button id="calcButton" class="buttons">Hitung</button>
                     </div>
                     
                     <span id="inputAlert"></span>
-                    
                     <label for="resultBox" id="resultName">Luas Persegi:</label>
         
-                    <div id="result">
-                        <input type="text" id="resultBox" class="textBox" name="resultBox" readonly>
+                    <div id="calcResult">
+                        <input type="text" id="resultBox" class="textBox" name="resultBox">
                         <button type="reset" id="resetButton" class="buttons">Reset</button>
                     </div>
+
                     <h5 id="hint">
-                        <i>Hint</i>: <span>Tekan <i>Enter</i> untuk menghitung.<br>
-                        Tekan <i>Esc</i> untuk mengulang.</span>
+                        **Kamu bisa tekan <i>Enter</i> untuk menghitung.<br>
+                        Tekan <i>Esc</i> untuk menghapus.
                     </h5>
-                </div>
+                    
+                </div>                
             </div>
 
         </section>
-        <hr>
+        <div>
+            <hr>
+        </div>
         <section id="infoSection">
 
-                <div id="info">
-                    <div>
-                        <p class="fontWeight">Rumus:</p>
-                        <p id="equation">L = S x S</p>
-                    </div>
-                    <div>
-                        <p id="description" class="fontWeight">Keterangan:</p>
-                        <p id="symbol">L = Luas Persegi</p>
-                        <p>S = Panjang Sisi</p>
-                    </div>
-                </div>
+            <div>
+                <p class="fontWeight">Rumus:</p>
+                <p id="equation">L = S x S</p>
+            </div>
+            <div>
+                <p id="description" class="fontWeight">Keterangan:</p>
+                <p id="symbol">L = Luas Persegi</p>
+                <p>S = Panjang Sisi</p>
+            </div>
 
         </section>
     </main>
