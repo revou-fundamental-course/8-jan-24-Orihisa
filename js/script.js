@@ -1,7 +1,7 @@
 const   calculate = document.getElementById('calculationButton'),
         reset = document.getElementById('resetButton'),
-        area = document.getElementById('calculateArea'),
-        perimeter = document.getElementById('calculatePerimeter');
+        area = document.getElementById('squareArea'),
+        perimeter = document.getElementById('squarePerimeter');
 
 let     inputValue = document.getElementById('squareSide'),
         result = document.getElementById('resultBox'),
@@ -66,8 +66,10 @@ function areaFunc() {
     document.getElementById('equation').innerHTML = 'L = S x S';
     document.getElementById('symbol').innerHTML = 'L = Luas Persegi';
     
-    calculate.addEventListener('click', function() {
-        
+    calculateArea();
+    calculate.addEventListener('click', calculateArea);
+    
+    function calculateArea() {
         if (inputValue.value != '' && validateInput() == true) {
             inputValue.style.border = 'none';
             result.value = parseFloat(inputValue.value ** 2).toFixed(4);
@@ -79,16 +81,7 @@ function areaFunc() {
         } else if (result.value = parseFloat(result.value)) {
             return parseFloat(result.value);
         }
-    });
-
-    if (result.value != '') {
-        result.value = parseFloat(inputValue.value ** 2).toFixed(4);
-    }
-    if (result.value != parseFloat(result.value)) {
-        return parseInt(result.value);
-    } else if (result.value = parseFloat(result.value)) {
-        return parseFloat(result.value);
-    }         
+    }    
 }
         
 function perimeterFunc() {
@@ -101,24 +94,20 @@ function perimeterFunc() {
     document.getElementById('equation').innerHTML = 'P = 4 x S';
     document.getElementById('symbol').innerHTML = 'P = Keliling Persegi';
 
-    calculate.addEventListener('click', function() {
+    calculatePerimeter();
+    calculate.addEventListener('click', calculatePerimeter);
+    
+    function calculatePerimeter() {
         if (inputValue.value != '' && validateInput() == true) {
             inputValue.style.border = 'none';
             result.value = parseFloat(4 * inputValue.value).toFixed(4);
+        } else {
+            result.value = '';
         }
         if (result.value != parseFloat(result.value)) {
             return parseInt(result.value);
         } else if (result.value = parseFloat(result.value)) {
             return parseFloat(result.value);
         }
-    });
-    
-    if (result.value != '') {
-        result.value = parseFloat(4 * inputValue.value).toFixed(4);
-    }
-    if (result.value != parseFloat(result.value)) {
-        return parseInt(result.value);
-    } else if (result.value = parseFloat(result.value)) {
-        return parseFloat(result.value);
     }
 }
