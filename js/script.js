@@ -81,7 +81,7 @@ function areaFunc() {
         }
     });
 
-    if (result.value !== '') {
+    if (result.value != '') {
         result.value = parseFloat(val.value ** 2).toFixed(3);
     }
     if (result.value != parseFloat(result.value)) {
@@ -102,7 +102,7 @@ function perimeterFunc() {
     document.getElementById('symbol').innerHTML = 'P = Keliling Persegi';
 
     count.addEventListener('click', function() {
-        if (val.value !== '' && validateInput() == true) {
+        if (val.value != '' && validateInput() == true) {
             val.style.border = 'none';
             result.value = parseFloat(4 * val.value).toFixed(3);
         }
@@ -113,7 +113,7 @@ function perimeterFunc() {
         }
     });
     
-    if (result.value !== '') {
+    if (result.value != '') {
         result.value = parseFloat(4 * val.value).toFixed(3);
     }
     if (result.value != parseFloat(result.value)) {
