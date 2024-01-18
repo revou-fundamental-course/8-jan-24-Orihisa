@@ -17,14 +17,15 @@ areaFunc();
 
 function validateInput() {
     
-    let numeric = /^\d*(\.?\d*)?$/;
-    if (!val.value.match(numeric)) {
-        val.value = parseFloat(val.value);
+    let numeric = /^\d*\.?\d*$/;
+    if (!val.value.match(numeric) || val.value.match(/^\.$/)) {
         alert.innerHTML = 'Isi dengan angka positif.';
         val.style.border = '2px solid red';
+        return false;
     } else {
         alert.innerHTML = '';
         val.style.border = 'none';
+        return true;
     }
 }
 
@@ -67,10 +68,12 @@ function areaFunc() {
     
     count.addEventListener('click', function() {
         
-        if (val.value != '') {
+        if (val.value != '' && validateInput() == true) {
             val.style.border = 'none';
+            result.value = parseFloat(val.value ** 2).toFixed(3);
+        } else {
+            result.value = '';
         }
-        result.value = parseFloat(val.value ** 2).toFixed(3);
         if (result.value != parseFloat(result.value)) {
             return parseInt(result.value);
         } else if (result.value = parseFloat(result.value)) {
@@ -99,10 +102,10 @@ function perimeterFunc() {
     document.getElementById('symbol').innerHTML = 'P = Keliling Persegi';
 
     count.addEventListener('click', function() {
-        if (val.value !== '') {
+        if (val.value !== '' && validateInput() == true) {
             val.style.border = 'none';
+            result.value = parseFloat(4 * val.value).toFixed(3);
         }
-        result.value = parseFloat(4 * val.value).toFixed(3);
         if (result.value != parseFloat(result.value)) {
             return parseInt(result.value);
         } else if (result.value = parseFloat(result.value)) {
