@@ -1,30 +1,30 @@
-const   count = document.getElementById('calcButton'),
+const   calculate = document.getElementById('calculationButton'),
         reset = document.getElementById('resetButton'),
-        area = document.getElementById('calcArea'),
-        perimeter = document.getElementById('calcPerimeter');
+        area = document.getElementById('calculateArea'),
+        perimeter = document.getElementById('calculatePerimeter');
 
-let     val = document.getElementById('squareSide'),
+let     inputValue = document.getElementById('squareSide'),
         result = document.getElementById('resultBox'),
         alert = document.getElementById('inputAlert');
 
 reset.addEventListener('click', clear);
 area.addEventListener('click', areaFunc);
 perimeter.addEventListener('click', perimeterFunc);
-val.addEventListener('keydown', trigger);
-val.addEventListener('input', validateInput)
-count.addEventListener('click', empty);
+inputValue.addEventListener('keydown', trigger);
+inputValue.addEventListener('input', validateInput)
+calculate.addEventListener('click', empty);
 areaFunc();
 
 function validateInput() {
     
-    let numeric = /^\d*\.?\d*$/;
-    if (!val.value.match(numeric) || val.value.match(/^\.$/)) {
+    let digit = /^\d*\.?\d*$/;
+    if (!inputValue.value.match(digit) || inputValue.value.match(/^\.$/)) {
         alert.innerHTML = 'Isi dengan angka positif.';
-        val.style.border = '2px solid red';
+        inputValue.style.border = '2px solid red';
         return false;
     } else {
         alert.innerHTML = '';
-        val.style.border = 'none';
+        inputValue.style.border = 'none';
         return true;
     }
 }
@@ -32,7 +32,7 @@ function validateInput() {
 function trigger(event) {
     
     if (event.key === 'Enter') {
-        count.click();
+        calculate.click();
     } else if (event.key === 'Escape') {
         reset.click();
     }
@@ -40,18 +40,18 @@ function trigger(event) {
 
 function empty() {
     
-    if (!val.value) {
-        val.style.border = '2px solid red';
+    if (!inputValue.value) {
+        inputValue.style.border = '2px solid red';
         alert.innerHTML = 'Masukan angka positif terlebih dahulu.';
     } else {
         alert.innerHTML = '';
-        val.style.border = 'none';
+        inputValue.style.border = 'none';
     }
 }
 
 function clear() {
-    val.style.border = 'none';
-    val.value = '';
+    inputValue.style.border = 'none';
+    inputValue.value = '';
     result.value = '';
     document.getElementById('inputAlert').innerHTML = '';
 }
@@ -66,11 +66,11 @@ function areaFunc() {
     document.getElementById('equation').innerHTML = 'L = S x S';
     document.getElementById('symbol').innerHTML = 'L = Luas Persegi';
     
-    count.addEventListener('click', function() {
+    calculate.addEventListener('click', function() {
         
-        if (val.value != '' && validateInput() == true) {
-            val.style.border = 'none';
-            result.value = parseFloat(val.value ** 2).toFixed(4);
+        if (inputValue.value != '' && validateInput() == true) {
+            inputValue.style.border = 'none';
+            result.value = parseFloat(inputValue.value ** 2).toFixed(4);
         } else {
             result.value = '';
         }
@@ -82,7 +82,7 @@ function areaFunc() {
     });
 
     if (result.value != '') {
-        result.value = parseFloat(val.value ** 2).toFixed(4);
+        result.value = parseFloat(inputValue.value ** 2).toFixed(4);
     }
     if (result.value != parseFloat(result.value)) {
         return parseInt(result.value);
@@ -101,10 +101,10 @@ function perimeterFunc() {
     document.getElementById('equation').innerHTML = 'P = 4 x S';
     document.getElementById('symbol').innerHTML = 'P = Keliling Persegi';
 
-    count.addEventListener('click', function() {
-        if (val.value != '' && validateInput() == true) {
-            val.style.border = 'none';
-            result.value = parseFloat(4 * val.value).toFixed(4);
+    calculate.addEventListener('click', function() {
+        if (inputValue.value != '' && validateInput() == true) {
+            inputValue.style.border = 'none';
+            result.value = parseFloat(4 * inputValue.value).toFixed(4);
         }
         if (result.value != parseFloat(result.value)) {
             return parseInt(result.value);
@@ -114,7 +114,7 @@ function perimeterFunc() {
     });
     
     if (result.value != '') {
-        result.value = parseFloat(4 * val.value).toFixed(4);
+        result.value = parseFloat(4 * inputValue.value).toFixed(4);
     }
     if (result.value != parseFloat(result.value)) {
         return parseInt(result.value);

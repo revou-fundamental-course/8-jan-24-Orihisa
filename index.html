@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KATIK</title>
+    <title>KATIK | Kalkulator Matematik</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -15,25 +15,26 @@
     </header>
     
     <main>
-        <header id="intro">
+        <header id="introduction">
 
             <h3>WELCOME TO KATIK</h3>
-            <p>
+            <h5>
                 Hai, Sobat! Selamat datang di KATIK. <br>
                 <span>Sebuah <i>web apps</i> sederhana yang berfungsi untuk menghitung luas dan keliling dari persegi.</span>
-            </p>
+            </h5>
+            
         </header>
         <div>
             <hr>
         </div>
-        <section id="middleSection">
+        <section id="calculatorSection">
 
-            <div id="calcMode">
-                <button id="calcArea" class="buttons" name="calcArea">Luas Persegi</button>
-                <button id="calcPerimeter" class="buttons" name="calcPerimeter">Keliling Persegi</button>
+            <div id="equationOption">
+                <button id="calculateArea" class="buttons" name="calculateArea">Luas Persegi</button>
+                <button id="calculatePerimeter" class="buttons" name="calculatePerimeter">Keliling Persegi</button>
             </div>
             
-            <div id="calcSection">
+            <div id="calculatorDisplay">
 
                 <figure id="imageBox">
                         <img src="assets/square.png" alt="square">
@@ -43,24 +44,19 @@
                     
                     <label for="squareSide">Sisi: (angka positif)</label>
         
-                    <div id="calcInput">
+                    <div id="calculatorInput">
                         <input type="text" id="squareSide" class="textBox" name="squareSide" autofocus>
-                        <button id="calcButton" class="buttons">Hitung</button>
+                        <button id="calculationButton" class="buttons">Hitung</button>
                     </div>
                     
                     <span id="inputAlert"></span>
                     <label for="resultBox" id="resultName">Luas Persegi:</label>
         
-                    <div id="calcResult">
+                    <div id="calculatorResult">
                         <input type="text" id="resultBox" class="textBox" name="resultBox" readonly>
                         <button type="reset" id="resetButton" class="buttons">Reset</button>
                     </div>
 
-                    <h5 id="hint">
-                        **Kamu bisa tekan <i>Enter</i> untuk menghitung.<br>
-                        Tekan <i>Esc</i> untuk menghapus.
-                    </h5>
-                    
                 </div>                
             </div>
 

@@ -23,7 +23,6 @@ body, button, input {
     justify-content: center;
     align-items: center;
     font-size: 24px;
-    
 }
 
 #header h1 {
@@ -66,41 +65,37 @@ main {
     box-shadow: 2px 2px 4px;
 }
 
-#intro {
+#introduction {
     text-align: center;
     font-size: large;
     color: #76453B;
-}
-
-#intro span {
-    margin: 0;
 }
 
 hr {
     margin-block: 30px;
 }
 
-#calcMode {
+#equationOption {
     display: flex;
     flex-direction: row;
     margin-bottom: 30px;
 }
 
-#calcArea {
+#calculateArea {
     font-size: large;
     border-radius: 8px 0 0 8px;
 }
 
-#calcPerimeter {
+#calculatePerimeter {
     font-size: large;
     border-radius: 0 8px 8px 0;
 }
 
-#calcMode button {
+#equationOption button {
     width: 100%;
 }
 
-#calcSection {
+#calculatorDisplay {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -151,7 +146,7 @@ label {
     border-radius: 8px 0 0 8px;
 }
 
-#calcButton, #resetButton {
+#calculationButton, #resetButton {
     font-size: large;
     width: 128px;
     height: inherit;
@@ -162,14 +157,6 @@ label {
     font-size: small;
     color: red;
     margin-block: 4px;
-}
-
-#hint{
-    font-weight: lighter;
-    text-align: center;
-    color: #76453B;
-    margin-top: 32px;
-    margin-bottom: 0;
 }
 
 #infoSection {
@@ -192,7 +179,6 @@ label {
     color: #F8FAE5;
     outline-color: #43766C;
     border: none;
-    border-radius: 8px;
     cursor: pointer;
 }
 
@@ -225,24 +211,16 @@ label {
     main {
         margin-inline: 16px;
     }
-    #calcSection {
-        flex-direction: column;
+    #calculatorDisplay {
+        flex-wrap: wrap;
     }
-    #calcMode {
+    #equationOption {
         width: auto;
     }
     #calculator {
         width: fit-content;
     }
     .textBox {
-        flex-direction: row;
         width: 300px;
     }   
-}
-
-@media only screen and (max-width: 375px) and (max-height:740px) {
-
-    #hint {
-        display: none;
-    }
 }
